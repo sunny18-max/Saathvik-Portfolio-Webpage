@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="512" height="512"
+     viewBox="0 0 200 200"
+     fill="none">
+
+  <defs>
+    <!-- Gradient -->
+    <linearGradient id="skGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#9333EA"/>
+    </linearGradient>
+
+    <!-- Soft glow -->
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background Circle -->
+  <circle
+    cx="100"
+    cy="100"
+    r="90"
+    stroke="url(#skGradient)"
+    stroke-width="6"
+    fill="rgba(255,255,255,0.02)"
+  />
+
+  <!-- Inner Ring -->
+  <circle
+    cx="100"
+    cy="100"
+    r="75"
+    stroke="url(#skGradient)"
+    stroke-width="2"
+    opacity="0.4"
+  />
+
+  <!-- Letter S -->
+  <path
+    d="
+      M125 65
+      C125 45, 75 45, 75 70
+      C75 90, 130 85, 130 115
+      C130 145, 70 145, 70 120
+    "
+    stroke="url(#skGradient)"
+    stroke-width="10"
+    stroke-linecap="round"
+    fill="none"
+    filter="url(#softGlow)"
+  />
+
+  <!-- Letter K -->
+  <path
+    d="
+      M135 60
+      V140
+      M135 100
+      L160 75
+      M135 100
+      L160 125
+    "
+    stroke="url(#skGradient)"
+    stroke-width="10"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    filter="url(#softGlow)"
+  />
+
+</svg>
